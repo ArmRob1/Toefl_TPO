@@ -1,0 +1,76 @@
+﻿<Window x:Class="Toefl_TPO.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Toefl_TPO"
+        mc:Ignorable="d"
+        Title="TPO SETUP" 
+        Height="300"
+        Width="350"
+        ResizeMode="CanMinimize">
+
+	<Grid>
+		<Grid.Background>
+			<ImageBrush ImageSource="C:\Users\Home\Desktop\back22.png" Stretch="UniformToFill"/>
+		</Grid.Background>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="0.75*"/>
+			<RowDefinition Height="0.75*"/>
+			<RowDefinition Height="0.75*"/>
+		</Grid.RowDefinitions>
+		<Frame Name="main" NavigationUIVisibility="Hidden"/>
+
+		<Label 
+            Grid.Row="0" 
+            FontSize="40"
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Top"
+			FontFamily="Tahoma"
+			Foreground="Blue">
+			<Label.Content>
+				<TextBlock TextDecorations="Underline">
+                TPO
+				</TextBlock>
+			</Label.Content>
+		</Label>
+		<Button Style="{StaticResource WithoutHover}"
+            x:Name="practice"
+			Grid.Row="1"
+            FontSize="45"
+			Width="250"
+			Height="80"
+			Padding="0 0 0 20"
+			Foreground="White"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Content="Practice"
+			BorderThickness="0"
+			Opacity="1"
+			FontFamily="Tahoma">
+			<Button.Background>
+				<ImageBrush ImageSource="C:\Users\Home\Desktop\but.png" 
+						Stretch="Fill"/>
+			</Button.Background>
+		</Button>
+		<Button Style="{StaticResource WithoutHover}"
+            x:Name="edit"
+            Grid.Row="2"
+            FontSize="45"
+			Width="250"
+			Height="80"
+			Padding="0 0 0 12"
+			Foreground="White"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+			BorderThickness="0"
+			FontFamily="Tahoma"
+            Content="Edit"
+				Click="Edit_Click">
+			<Button.Background>
+				<ImageBrush ImageSource="C:\Users\Home\Desktop\but.png" 
+						Stretch="Fill"/>
+			</Button.Background>
+		</Button>
+	</Grid>
+</Window>
