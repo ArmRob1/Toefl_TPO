@@ -25,7 +25,12 @@ namespace Toefl_TPO
 
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
-            main.Content = new EditPage();
+            DefaultWindow dw = new DefaultWindow();
+            EditPage ep = new EditPage();
+            dw.Content = ep;
+            dw.Title = ep.Title;
+            dw.Show();
+            this.Close();
         }
     }
 }

@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace Toefl_TPO.Pages
 {
-    /// <summary>
-    /// Interaction logic for EditPage.xaml
-    /// </summary>
     public partial class EditPage : Page
     {
         public EditPage()
@@ -47,7 +44,6 @@ namespace Toefl_TPO.Pages
             //        fileContent = reader.ReadToEnd();
             //    }
             //}
-
         }
     }
 }

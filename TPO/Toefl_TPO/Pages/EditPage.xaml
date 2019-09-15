@@ -6,69 +6,90 @@
       xmlns:local="clr-namespace:Toefl_TPO.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="450"
-	  d:DesignWidth="910"
-      Title="EditPage">
+	  d:DesignWidth="800"
+      Title="Edit Page">
 
-	<Grid>
-		<Grid.RowDefinitions>
-			<RowDefinition/>
-			<RowDefinition Height="0.125*"/>
-		</Grid.RowDefinitions>
-		<Grid.ColumnDefinitions>
-			<ColumnDefinition Width="0.25*"/>
-			<ColumnDefinition/>
-			<ColumnDefinition Width="0.25*"/>
-		</Grid.ColumnDefinitions>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="0.125*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.25*"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0.75*"/>
+        </Grid.ColumnDefinitions>
 
-		<TabControl
+        <TabControl
             TabStripPlacement="Top"
-            Grid.Row="0"
-            Grid.Column="0"
-            Grid.ColumnSpan="3"
+            Grid.ColumnSpan="4"
             Margin="5">
 
-			<TabItem Header="Reading"   x:Name="readingTab" Height="33" Width="215" HorizontalAlignment="Left">
-				<TextBox
+            <TabControl.Resources>
+                <Style TargetType="TabItem">
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="TabItem">
+                                <Border Name="Border" BorderThickness="1,1,1,0" BorderBrush="Gainsboro" CornerRadius="4,4,0,0" Margin="2,0">
+                                    <ContentPresenter x:Name="ContentSite"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        ContentSource="Header"
+                                        Margin="10,2"/>
+                                </Border>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsSelected" Value="True">
+                                        <Setter TargetName="Border" Property="Background" Value="LightSkyBlue" />
+                                    </Trigger>
+                                    <Trigger Property="IsSelected" Value="False">
+                                        <Setter TargetName="Border" Property="Background" Value="GhostWhite" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </TabControl.Resources>
+
+            <TabItem Header="Reading"   x:Name="readingTab" Height="30">
+                <TextBox
                     x:Name="readingEditTextBox"
                     SpellCheck.IsEnabled="True"
                     VerticalScrollBarVisibility="Auto"
                     AcceptsReturn="True"
                     AcceptsTab="True"
                     TextWrapping="WrapWithOverflow"/>
-			</TabItem>
-			<Separator Height="5"/>
-			<TabItem Header="Writing"   x:Name="writingTab"  Width="215" HorizontalAlignment="Stretch">
-				<TextBox
+            </TabItem>
+            <TabItem Header="Writing"   x:Name="writingTab">
+                <TextBox
                     x:Name="writingEditTextBox"
                     SpellCheck.IsEnabled="True"
                     VerticalScrollBarVisibility="Auto"
                     AcceptsReturn="True"
                     AcceptsTab="True"
                     TextWrapping="WrapWithOverflow"/>
-			</TabItem>
-			<Separator/>
-			<TabItem Header="Speaking"  x:Name="speakingTab" Width="215" HorizontalAlignment="Stretch">
-				<TextBox
+            </TabItem>
+            <TabItem Header="Speaking"  x:Name="speakingTab">
+                <TextBox
                     x:Name="speakingEditTextBox"
                     SpellCheck.IsEnabled="True"
                     VerticalScrollBarVisibility="Auto"
                     AcceptsReturn="True"
                     AcceptsTab="True"
                     TextWrapping="WrapWithOverflow"/>
-			</TabItem>
-			<Separator/>
-			<TabItem Header="Listening" x:Name="listeningTab" Width="215" HorizontalAlignment="Right">
-				<TextBox
+            </TabItem>
+            <TabItem Header="Listening" x:Name="listeningTab">
+                <TextBox
                     x:Name="listeningEditTextBox"
                     SpellCheck.IsEnabled="True"
                     VerticalScrollBarVisibility="Auto"
                     AcceptsReturn="True"
                     AcceptsTab="True"
                     TextWrapping="WrapWithOverflow"/>
-			</TabItem>
-		</TabControl>
+            </TabItem>
+        </TabControl>
 
-		<Button
+        <Button
             x:Name="file"
             Content="Open File"
             Grid.Row="1"
@@ -76,5 +97,5 @@
             Margin="10 5 5 10"
             Click="File_Click"/>
 
-	</Grid>
+    </Grid>
 </Page>

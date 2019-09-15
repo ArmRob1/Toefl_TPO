@@ -10,31 +10,31 @@
         Width="350"
         ResizeMode="CanMinimize">
 
-	<Grid>
-		<Grid.Background>
-			<ImageBrush ImageSource="C:\Users\Home\Desktop\back22.png" Stretch="UniformToFill"/>
-		</Grid.Background>
-		<Grid.RowDefinitions>
-			<RowDefinition Height="0.75*"/>
-			<RowDefinition Height="0.75*"/>
-			<RowDefinition Height="0.75*"/>
-		</Grid.RowDefinitions>
-		<Frame Name="main" NavigationUIVisibility="Hidden"/>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\HOME\Pictures\Saved Pictures\infinitytriangle.jpg" 
+                        Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.75*"/>
+            <RowDefinition Height="0.75*"/>
+            <RowDefinition Height="0.75*"/>
+        </Grid.RowDefinitions>
 
-		<Label 
+        <Label 
             Grid.Row="0" 
             FontSize="40"
             HorizontalAlignment="Center" 
             VerticalAlignment="Top"
 			FontFamily="Tahoma"
 			Foreground="Blue">
-			<Label.Content>
-				<TextBlock TextDecorations="Underline">
-                TPO
-				</TextBlock>
-			</Label.Content>
-		</Label>
-		<Button Style="{StaticResource WithoutHover}"
+            <Label.Content>
+                <TextBlock TextDecorations="Underline" 
+                           Text="TPO"/>
+            </Label.Content>
+        </Label>
+
+        <Button Style="{StaticResource WithoutHover}"
             x:Name="practice"
 			Grid.Row="1"
             FontSize="45"
@@ -48,12 +48,13 @@
 			BorderThickness="0"
 			Opacity="1"
 			FontFamily="Tahoma">
-			<Button.Background>
-				<ImageBrush ImageSource="C:\Users\Home\Desktop\but.png" 
-						Stretch="Fill"/>
-			</Button.Background>
-		</Button>
-		<Button Style="{StaticResource WithoutHover}"
+            <Button.Background>
+                <ImageBrush ImageSource="C:\Users\HOME\Pictures\Saved Pictures\steam.jpg" 
+						    Stretch="Fill"/>
+            </Button.Background>
+        </Button>
+
+        <Button Style="{StaticResource WithoutHover}"
             x:Name="edit"
             Grid.Row="2"
             FontSize="45"
@@ -66,11 +67,12 @@
 			BorderThickness="0"
 			FontFamily="Tahoma"
             Content="Edit"
-				Click="Edit_Click">
-			<Button.Background>
-				<ImageBrush ImageSource="C:\Users\Home\Desktop\but.png" 
-						Stretch="Fill"/>
-			</Button.Background>
-		</Button>
-	</Grid>
+			Click="Edit_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="C:\Users\HOME\Pictures\Saved Pictures\steam.jpg" 
+						    Stretch="Fill"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
 </Window>

@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace Toefl_TPO
 {
-    /// <summary>
-    /// Interaction logic for DefaultWindow.xaml
-    /// </summary>
     public partial class DefaultWindow : Window
     {
         public DefaultWindow()
