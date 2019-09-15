@@ -21,29 +21,5 @@ namespace Toefl_TPO.Pages
         {
             InitializeComponent();
         }
-
-        private void File_Click(object sender, RoutedEventArgs e)
-        {
-            //OpenFileDialog ofd = new OpenFileDialog();
-
-
-
-            //ofd.InitialDirectory = "c:\\";
-            //ofd.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
-            //ofd.FilterIndex = 2;
-            //ofd.RestoreDirectory = true;
-
-            //if (ofd.ShowDialog() == DialogResult.OK)
-            //{
-            //    filePath = ofd.FileName;
-
-            //    var fileStream = ofd.OpenFile();
-
-            //    using (StreamReader reader = new StreamReader(fileStream))
-            //    {
-            //        fileContent = reader.ReadToEnd();
-            //    }
-            //}
-        }
     }
 }
