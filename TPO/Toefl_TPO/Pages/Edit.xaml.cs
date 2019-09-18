@@ -12,15 +12,11 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
 namespace Toefl_TPO.Pages
 {
-    /// <summary>
-    /// Interaction logic for AnswerEditPage.xaml
-    /// </summary>
-    public partial class AnswerEditPage : Page
+    public partial class Edit : Page
     {
-        public AnswerEditPage()
+        public Edit()
         {
             InitializeComponent();
         }

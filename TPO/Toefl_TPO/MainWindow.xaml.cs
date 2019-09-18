@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Toefl_TPO.Pages;
-
+using Toefl_TPO.Tools;
 namespace Toefl_TPO
 {
     public partial class MainWindow : Window
@@ -26,11 +26,11 @@ namespace Toefl_TPO
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
             DefaultWindow dw = new DefaultWindow();
-            EditPage ep = new EditPage();
-            dw.Content = ep;
-            dw.Title = ep.Title;
-            dw.Show();
+            Tests tests = new Tests();
+            dw.Content = tests;
+            dw.Title = tests.Title;
             dw.Owner = this;
+            dw.Show();
         }
     }
 }

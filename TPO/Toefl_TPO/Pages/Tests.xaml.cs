@@ -12,22 +12,23 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
 namespace Toefl_TPO.Pages
 {
-    public partial class EditPage : Page
+    public partial class Tests : Page
     {
-        public EditPage()
+        public Tests()
         {
             InitializeComponent();
         }
 
-        private void Next_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            NavigationWindow nw = new NavigationWindow();
-            nw.Content = new AnswerEditPage().Content;
-            nw.ShowsNavigationUI = false;
-            nw.Show();
+            DefaultWindow dw = new DefaultWindow();
+            Edit edit = new Edit();
+            dw.Content = edit.Content;
+            dw.Title = edit.Title;
+            dw.Owner = Window.GetWindow(this);
+            dw.Show();
         }
     }
 }
