@@ -12,7 +12,9 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition Height="0.125*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="0.35*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.35*"/>
@@ -20,9 +22,12 @@
             <ColumnDefinition Width="0.25*"/>
         </Grid.ColumnDefinitions>
 
+        <Frame x:Name="edit" NavigationUIVisibility="Hidden"/>
+
         <TabControl
             TabStripPlacement="Top"
             Grid.ColumnSpan="2"
+            Grid.RowSpan="3"
             Margin="5">
 
             <TabControl.Resources>
@@ -96,7 +101,7 @@
         <Button
             x:Name="file"
             Content="Open File"
-            Grid.Row="1"
+            Grid.Row="3"
             Grid.Column="0"
             Background="White"
             Margin="5">
@@ -118,6 +123,20 @@
             </Button.Resources>
         </Button>
 
+        <DockPanel Grid.Column="1" Grid.Row="3">
+            <TextBlock 
+                Text="Question's count" 
+                DockPanel.Dock="Left"
+                VerticalAlignment="Center"
+                HorizontalAlignment="Left"
+                Margin="5" />
+            <TextBox 
+                x:Name="questionCount"
+                DockPanel.Dock="Right"
+                VerticalContentAlignment="Center"
+                Margin="10"/>
+        </DockPanel>
+
         <Label
             x:Name="testNumber"
             Content="Test 1"
@@ -129,10 +148,11 @@
         <Button
             x:Name="next"
             Content="Next"
-            Grid.Row="1"
+            Grid.Row="3"
             Grid.Column="2"
             Background="White"
-            Margin="5">
+            Margin="5"
+            Click="Next_Click">
 
             <Button.Resources>
                 <Style TargetType="Button">

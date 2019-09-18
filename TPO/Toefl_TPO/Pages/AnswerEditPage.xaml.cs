@@ -12,25 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Toefl_TPO.Pages;
 
-namespace Toefl_TPO
+namespace Toefl_TPO.Pages
 {
-    public partial class MainWindow : Window
+    /// <summary>
+    /// Interaction logic for AnswerEditPage.xaml
+    /// </summary>
+    public partial class AnswerEditPage : Page
     {
-        public MainWindow()
+        public AnswerEditPage()
         {
             InitializeComponent();
-        }
-
-        private void Edit_Click(object sender, RoutedEventArgs e)
-        {
-            DefaultWindow dw = new DefaultWindow();
-            EditPage ep = new EditPage();
-            dw.Content = ep;
-            dw.Title = ep.Title;
-            dw.Show();
-            dw.Owner = this;
         }
     }
 }

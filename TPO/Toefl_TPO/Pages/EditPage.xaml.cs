@@ -21,5 +21,13 @@ namespace Toefl_TPO.Pages
         {
             InitializeComponent();
         }
+
+        private void Next_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationWindow nw = new NavigationWindow();
+            nw.Content = new AnswerEditPage().Content;
+            nw.ShowsNavigationUI = false;
+            nw.Show();
+        }
     }
 }
